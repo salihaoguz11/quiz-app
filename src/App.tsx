@@ -54,10 +54,19 @@ function App() {
         correct,
         correctAnswer: questions[number].correct_answer,
       };
+      setUserAnswers((prev) => [...prev, answerObject]);
     }
   };
 
-  const nextQuestion = () => {};
+  const nextQuestion = () => {
+    //Move on to the next question if not the last question
+    const nextQuestion = number + 1;
+    if (nextQuestion === TOTAL_QUESTIONS) {
+      setGameOver(true);
+    } else {
+      setNumber(nextQuestion);
+    }
+  };
 
   return (
     <div className="App">
