@@ -13,4 +13,6 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const ButtonWrapper = styled.div``;
+export const ButtonWrapper = styled.div`
+  transition: all 0.3s ease-in-out;
+`;
