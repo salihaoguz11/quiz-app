@@ -23,13 +23,16 @@ const QuestionCard: React.FC<Props> = ({
     <p className="number">
       Question:{questionNr} / {totalQuestions}
     </p>
+    {/* The reason to use dangerous..., because otherwise the system cannot read some marks like quotation mark and looks very weird,
+    but with dangerous we render directly from external sourse  */}
     <p dangerouslySetInnerHTML={{ __html: question }} />
+    {/* <p>{question}</p> */}
     <div>
       {answers.map((answer) => (
         <ButtonWrapper
           key={answer}
           correct={userAnswer?.correctAnswer === answer}
-          userClicked={userAnswer?.answer === answer}
+          userclicked={userAnswer?.answer === answer}
         >
           <button
             disabled={userAnswer ? true : false}
