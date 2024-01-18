@@ -2,7 +2,8 @@
 
 Quiz App with Typescript, React Js and Styled Components
 
-## Project URL
+<!--
+## Project URL -->
 
 ## Project Gif
 
